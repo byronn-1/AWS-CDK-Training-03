@@ -11,3 +11,7 @@ https://docs.aws.amazon.com/cdk/api/v2/docs/aws-construct-library.html
 
 
 https://cdkworkshop.com/
+
+
+tracking changes
+TS CDK projects created with cdk init ignore all .js files by default. To track these files with git, add !lambda/*.js to your .gitignore file. This ensures that your Lambda assets are discoverable during the Pipelines section of this tutorial.
