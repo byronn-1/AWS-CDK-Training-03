@@ -30,6 +30,10 @@ export class HitCounter extends Construct {
                 DOWNSTREAM_FUNCTION_NAME: props.downstream.functionName,
                 HITS_TABLE_NAME: table.tableName
             }
-        })
+        });
+        //grant lambda read/write permissions to our table
+        table.grantReadWriteData(this.handler);
+
+        props.downstream.grantInvoke(this.handler)
     }
 }
